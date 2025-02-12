@@ -1,0 +1,270 @@
+*,
+*::before,
+*::after {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+
+  height: 100vh;
+  margin: 0;
+
+  display: inline;
+  background-color: #e5eac7;
+}
+
+header {
+  display: inline;
+  background-color: #e5eac7;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 4rem;
+  margin-block: 3rem;
+
+  transition: text-shadow .3s, color .3s;
+  transition-timing-function: ease-out;
+
+  color: #6a723e;
+  text-shadow: 0;
+}
+
+header h1:hover {
+  transition: text-shadow .3s, color .3s;
+  transition-timing-function: ease-out;
+
+  color: #757b4e;
+  text-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+  background-color: #858d56;
+  padding: 5px 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+nav ul {
+  padding: 0;
+
+  display: flex;
+  gap: 2rem;
+}
+
+nav li {
+  display: inline;
+  list-style-type: none;
+}
+
+nav li a {
+  text-decoration: none;
+  color: white;
+
+  transition: font-weight .3s ease-in-out;
+  font-weight: normal;
+}
+
+nav li a:hover {
+  transition: font-weight .3s ease-in-out;
+  font-weight: bold;
+}
+
+main {
+  background-color: #fdfff0;
+  padding: 1.3rem;
+
+  display: flex;
+  gap: 1.5rem;
+}
+
+article {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+article > div {
+  border-radius: inherit;
+  padding: 25px 20px 8px;
+
+  transition: box-shadow .3s ease-in-out;
+  box-shadow: 0 -4px #6a723e;
+}
+
+article > div:hover {
+  transition: box-shadow .3s ease-in-out;
+  box-shadow: 0 -4px #8d9658;
+}
+
+article > div section {
+  display: flex;
+}
+
+article h2 {
+  transition: background-color .3s, box-shadow .3s;
+  transition-timing-function: ease-in-out;
+
+  display: inline;
+  text-wrap: nowrap;
+  color: white;
+  background-color: #757b4e;
+
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+article h2:hover {
+  transition: background-color .3s, box-shadow .3s;
+  transition-timing-function: ease-in-out;
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  background-color: #7f8465;
+}
+
+article h2 .bi {
+  margin-right: 0.5rem;
+}
+
+article section > img {
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.1));
+}
+
+#content {
+  flex: 5;
+  display: flex;
+  flex-flow: column nowrap;
+
+  gap: 1.5rem;
+}
+
+#content p {
+  opacity: 75%;
+}
+
+aside {
+  flex: 1;
+}
+
+aside section {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+aside figure {
+  display: flex;
+  flex-flow: column nowrap;
+
+  margin-block: 1.5rem;
+}
+
+aside img {
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.1));
+}
+
+aside figcaption {
+  text-align: center;
+  opacity: 75%;
+
+  margin-top: 0.5rem;
+}
+
+aside h3 {
+  text-align: center;
+  margin-block: 0.5rem;
+  color: #485139;
+}
+
+aside ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+aside li {
+  list-style-type: none;
+}
+
+aside li .bi {
+  font-size: 2rem;
+
+  transition: text-shadow .3s, color .3s;
+  transition-timing-function: ease-in-out;
+  text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  color: #595854;
+}
+
+aside li .bi:hover {
+  transition: text-shadow .3s, color .3s;
+  transition-timing-function: ease-in-out;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: #768855;
+}
+
+footer {
+  display: flex;
+  color: white;
+  background-color: #757b4e;
+
+  text-align: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1100px) {
+  #content article div section {
+    display: flex;
+    flex-wrap: wrap-reverse;
+  }
+
+  article section div > p {
+    position: relative;
+  }
+
+  article section > img {
+    margin-top: 1rem;
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+
+  main {
+    display: block;
+  }
+
+  aside {
+    margin-top: 1.5rem;
+  }
+
+  aside div > section {
+    justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  header h1 {
+    font-size: 3rem;
+    margin-block: 2rem;
+  }  
+}
+
+@media screen and (max-width: 340px) {
+  nav {
+    position: relative;
+  }
+
+  nav ul {
+    flex-flow: row wrap;
+  }
+}
